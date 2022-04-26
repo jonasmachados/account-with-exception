@@ -18,28 +18,28 @@ public class Account {
         this.balance = balance;
         this.withdrawLimit = withdrawLimit;
     }
-    
+
     //TOSTRING
     @Override
     public String toString() {
-        return "Account: " 
-                + "number: " 
-                + number 
-                + ", holder: " 
+        return "Account: "
+                + "number: "
+                + number
+                + ", holder: "
                 + holder
-                + ", balance: " 
+                + ", balance: "
                 + balance
                 + ", withdrawLimit: " + withdrawLimit + '}';
     }
-    
-    public void deposit(Double amount){
-        
+
+    public void deposit(Double amount) {
+        balance += amount;
     }
-    
-    public void withdrawLimit(Double amount){
-        
+
+    public void withdraw(Double amount) {
+        balance -= amount;
     }
-    
+
     //GET AND SET
     public Integer getNumber() {
         return number;
@@ -60,7 +60,7 @@ public class Account {
     public Double getBalance() {
         return balance;
     }
-
+    
     public Double getWithdrawLimit() {
         return withdrawLimit;
     }
@@ -68,6 +68,5 @@ public class Account {
     public void setWithdrawLimit(Double withdrawLimit) {
         this.withdrawLimit = withdrawLimit;
     }
-  
 
 }
